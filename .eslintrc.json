@@ -6,17 +6,15 @@
   },
   "extends": [
     "react-app",
+    "eslint:recommended",
     "plugin:react/recommended",
-    "eslint:recommended", // 使用推荐的eslint
-    "eslint-config-prettier",
-    "plugin:prettier/recommended", // 1.繼承.prettierrc.js文件规则  2.開啟rules的 "prettier/prettier": "error"  3.eslint fix的同时执行prettier格式化
-    "plugin:react/recommended", // 使用插件支持react
     "plugin:import/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "airbnb"
+    "airbnb",
+    "plugin:prettier/recommended"
   ],
   "overrides": [],
+  "ignorePatterns": ["vite.config.js"],
+
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -24,10 +22,11 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks"],
+  "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
     // 配置规则
     "semi": ["error", "always"],
+    "prettier/prettier": "error",
     "import/order": [
       "error",
       {
@@ -47,25 +46,34 @@
         }
       }
     ],
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-one-expression-per-line": "off",
     "no-plusplus": [
       "error",
       {
         "allowForLoopAfterthoughts": true
       }
     ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "test.{ts,tsx}", // repos with a single test file
+          "test-*.{ts,tsx}", // repos with multiple top-level test files
+          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
+          "src/setupTests.ts" // setup
+        ],
+        "optionalDependencies": false
+      }
+    ],
     "react/function-component-definition": "off",
     "arrow-body-style": "off",
     "import/prefer-default-export": "off",
     "import/no-named-default": "off",
-    "no-param-reassign": "off",
-    "no-alert": "off",
-    "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

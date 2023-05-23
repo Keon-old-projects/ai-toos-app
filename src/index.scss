@@ -1,0 +1,163 @@
+/***************************** base *****************************/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import 'scss-reset/reset';
+@import './variables';
+@import './module';
+:root {
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  background: $black-900;
+}
+
+body,
+#root {
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 16px;
+  color: $white;
+}
+
+h1,
+.fs-1 {
+  font-size: 3rem;
+}
+h2,
+.fs-2 {
+  font-size: 2.5rem;
+}
+h3,
+.fs-3 {
+  font-size: 2rem;
+}
+h4,
+.fs-4 {
+  font-size: 1.75rem;
+}
+h5,
+.fs-5 {
+  font-size: 1.5em;
+}
+h6,
+.fs-6 {
+  font-size: 1.25rem;
+}
+small {
+  font-size: 0.875rem;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
+/***************************** Layout *****************************/
+.container {
+  margin: auto;
+  max-width: 1296px;
+}
+
+/***************************** Utilities *****************************/
+.display {
+  &-1 {
+    font-size: 160px;
+  }
+  &-2 {
+    font-size: 120px;
+  }
+  &-3 {
+    font-size: 80px;
+  }
+}
+.fw-bold {
+  font-weight: 900;
+}
+.fw-normal {
+  font-weight: 400;
+}
+
+.border {
+  @include border(1px, $black-200);
+}
+
+.d {
+  &-flex {
+    display: flex;
+  }
+  &-block {
+    display: block;
+  }
+  &-inline {
+    display: inline;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+}
+.justify-content {
+  @include flex(justify-content);
+}
+.align-items {
+  @include flex(align-items);
+}
+.align-self {
+  @include flex(align-self);
+}
+.h {
+  @include space(height);
+}
+.w {
+  @include space(width);
+}
+.m {
+  @include space(margin);
+  &y {
+    @include space(margin-top, margin-bottom);
+  }
+  &x {
+    @include space(margin-left, margin-right);
+  }
+  &t {
+    @include space(margin-top);
+  }
+  &b {
+    @include space(margin-bottom);
+  }
+  &s {
+    @include space(margin-left);
+  }
+  &e {
+    @include space(margin-right);
+  }
+}
+.p {
+  @include space(padding);
+  &y {
+    @include space(padding-top, padding-bottom);
+  }
+  &x {
+    @include space(padding-left, padding-right);
+  }
+
+  &t {
+    @include space(padding-top);
+  }
+  &b {
+    @include space(padding-bottom);
+  }
+  &s {
+    @include space(padding-left);
+  }
+  &e {
+    @include space(padding-right);
+  }
+}
+
+.text {
+  &-white {
+    color: $white;
+  }
+}

@@ -1,9 +1,9 @@
-node_modules/
- public/
- es/
- lib/
- dist/
- docs/
- src/assets/
- package.json
-vite.config.js
+# node_modules/
+# public/
+# es/
+# lib/
+# dist/
+# docs/
+# src/assets/
+# package.json
+# vite.config.js

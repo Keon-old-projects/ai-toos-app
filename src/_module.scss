@@ -1,0 +1,111 @@
+@mixin space($x, $y: null) {
+  @if $x and $y {
+    &-d1 {
+      #{$x}: 160px;
+      #{$y}: 160px;
+    }
+    &-d2 {
+      #{$x}: 120px;
+      #{$y}: 120px;
+    }
+    &-d3 {
+      #{$x}: 80px;
+      #{$y}: 80px;
+    }
+    &-1 {
+      #{$x}: 3rem;
+      #{$y}: 3rem;
+    }
+    &-2 {
+      #{$x}: 2.5rem;
+      #{$y}: 2.5rem;
+    }
+    &-3 {
+      #{$x}: 2rem;
+      #{$y}: 2rem;
+    }
+    &-4 {
+      #{$x}: 1.75rem;
+      #{$y}: 1.75rem;
+    }
+    &-5 {
+      #{$x}: 1.5rem;
+      #{$y}: 1.5rem;
+    }
+    &-6 {
+      #{$x}: 1.25rem;
+      #{$y}: 1.25rem;
+    }
+    &-small {
+      #{$x}: 0.75rem;
+      #{$y}: 0.75rem;
+    }
+  } @else {
+    &-d1 {
+      #{$x}: 160px;
+    }
+    &-d2 {
+      #{$x}: 120px;
+    }
+    &-d3 {
+      #{$x}: 80px;
+    }
+    &-1 {
+      #{$x}: 3rem;
+    }
+    &-2 {
+      #{$x}: 2.5rem;
+    }
+    &-3 {
+      #{$x}: 2rem;
+    }
+    &-4 {
+      #{$x}: 1.75rem;
+    }
+    &-5 {
+      #{$x}: 1.5rem;
+    }
+    &-6 {
+      #{$x}: 1.25rem;
+    }
+    &-small {
+      #{$x}: 0.75rem;
+    }
+  }
+}
+
+@mixin flex($name) {
+  &-start {
+    #{$name}: flex-start;
+  }
+
+  &-end {
+    #{$name}: flex-end;
+  }
+
+  &-center {
+    #{$name}: center;
+  }
+
+  &-between {
+    #{$name}: space-between;
+  }
+
+  &-around {
+    #{$name}: space-around;
+  }
+}
+@mixin border($side, $color) {
+  &-top {
+    border-top: $side solid $color;
+  }
+  &-right {
+    border-right: $side solid $color;
+  }
+  &-left {
+    border-left: $side solid $color;
+  }
+  &-bottom {
+    border-bottom: $side solid $color;
+  }
+}

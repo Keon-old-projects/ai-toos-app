@@ -1,0 +1,23 @@
+@import '../../variables';
+.card {
+  width: 375px;
+  border: 1px $black-200 solid;
+  border-radius: 5px;
+  overflow: hidden;
+  &-img {
+    width: 100%;
+  }
+  &-body {
+    padding: 1.25rem 2rem;
+  }
+  &-title {
+    margin-bottom: 12px;
+  }
+  .list-group {
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+    }
+  }
+}
