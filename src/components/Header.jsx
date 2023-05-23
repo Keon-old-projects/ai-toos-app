@@ -1,20 +1,20 @@
 import React from 'react';
 
+import Navbar from './Navbar';
 import logo from '../assets/logo.png';
-import Navbar from '../components/Navbar';
 
 const Header = () => {
   return (
     <header>
       <Navbar>
-        <h1 className="d-flex justify-content-between">
-          <img src={logo} alt="logo.png" />
+        <h1 className="px-small">
+          <img src={logo} alt="logo.png" className="h-1" />
         </h1>
-        <ul>
-          <li>
+        <ul className="d-flex">
+          <li className="px-small">
             <a href="/">首頁</a>
           </li>
-          <li>
+          <li className="px-small">
             <a href="/shop">定價</a>
           </li>
         </ul>

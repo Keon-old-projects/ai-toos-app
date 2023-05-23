@@ -4,15 +4,10 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:import/recommended"
-  ],
-  "ignorePatterns": ["vite.config.ts"],
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:import/recommended"],
+  "ignorePatterns": ["vite.config.js"],
   // "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -53,15 +48,15 @@
       "error",
       {
         "devDependencies": [
-          "test.{ts,tsx}", // repos with a single test file
-          "test-*.{ts,tsx}", // repos with multiple top-level test files
-          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
-          "src/setupTests.ts" // setup
+          "test.{js,jsx}", // repos with a single test file
+          "test-*.{js,jsx}", // repos with multiple top-level test files
+          "**/*{.,_}{test,spec}.{js,jsx}", // tests where the extension or filename suffix denotes that it is a test
+          "src/setupTests.js" // setup
         ],
         "optionalDependencies": false
       }
     ],
-    "react/prop-types": false,
+    "react/prop-types": 0,
     "react/function-component-definition": "off",
     "arrow-body-style": "off",
     "import/prefer-default-export": "off",

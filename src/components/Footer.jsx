@@ -1,9 +1,11 @@
 import React from 'react';
+
 import logo from '../assets/logo.png';
+
 const Footer = () => {
   return (
-    <footer className="container border-top">
-      <section className="d-flex justify-content-between" style={{ padding: `80px 0` }}>
+    <footer className="mt-d3 border-top">
+      <section className="d-flex justify-content-between px-small py-d3">
         <h2 className="display-3 fw-bold">
           首頁 <br />
           定價
@@ -14,22 +16,22 @@ const Footer = () => {
         <p className="fw-bold">AI工具王 © 2023</p>
         <ul className="d-flex">
           <li className="py-small py-6">
-            <a href="https://www.facebook.com/hexschool/?locale=zh_TW" className="text-white fw-bold" target="_blank">
+            <a href="https://www.facebook.com/hexschool/?locale=zh_TW" className="text-white fw-bold" target="_blank" rel="noreferrer">
               Facebook
             </a>
           </li>
           <li className="py-small mx-6 py-6">
-            <a href="https://twitter.com/" className="text-white fw-bold" target="_blank">
+            <a href="https://twitter.com/" className="text-white fw-bold" target="_blank" rel="noreferrer">
               Twitter
             </a>
           </li>
           <li className="py-small py-6">
-            <a href="https://www.instagram.com/" className="text-white fw-bold" target="_blank">
+            <a href="https://www.instagram.com/" className="text-white fw-bold" target="_blank" rel="noreferrer">
               Instagram
             </a>
           </li>
         </ul>
-        <a href="#" className="text-white fw-bold">
+        <a href="/" className="text-white fw-bold">
           Back to top
         </a>
       </section>

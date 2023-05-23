@@ -96,6 +96,7 @@
   }
 }
 @mixin border($side, $color) {
+  border:  $side solid $color;
   &-top {
     border-top: $side solid $color;
   }
@@ -107,5 +108,62 @@
   }
   &-bottom {
     border-bottom: $side solid $color;
+  }
+}
+@mixin color{
+  &-white{
+    color: $white;
+  }
+  &-black{
+    color:$black-900;
+  }
+  &-dark{
+    color: $black-800;
+  }
+  &-gray{
+    color: $black-600;
+  }
+  &-gray-light{
+    color: $black-400;
+  }
+  &-light{
+    color: $black-200;
+  }
+  &-surface{
+    color: $surface;
+  }
+}
+@mixin bgcolor{
+  &-white{
+    background-color: $white;
+  }
+  &-black{
+    background-color:$black-900;
+  }
+  &-dark{
+    background-color: $black-800;
+  }
+  &-gray{
+    background-color: $black-600;
+  }
+  &-gray-light{
+    background-color: $black-400;
+  }
+  &-light{
+    background-color: $black-200;
+  }
+  &-surface{
+    background-color: $surface;
+  }
+}
+@mixin textpos{
+  &-start{
+    text-align: start;
+  }
+  &-center{
+    text-align: center;
+  }
+  &-end{
+    text-align: end;
   }
 }
