@@ -1,33 +1,32 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-      "react-app",
-        "plugin:react/recommended",
-        "eslint:recommended",
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "react-app",
     "plugin:react/recommended",
+    "eslint:recommended", // 使用推荐的eslint
+    "eslint-config-prettier",
+    "plugin:prettier/recommended", // 1.繼承.prettierrc.js文件规则  2.開啟rules的 "prettier/prettier": "error"  3.eslint fix的同时执行prettier格式化
+    "plugin:react/recommended", // 使用插件支持react
     "plugin:import/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "eslint-config-prettier",
-        "airbnb"
-    ],
-    "overrides": [
-    ],
-    "parserOptions": {
-      "ecmaFeatures": {
-       "jsx": true
-      },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    "airbnb"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "plugins": [
-      "react","react-hooks"
-    ],
-    "rules": {
-      // 配置规则
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    // 配置规则
     "semi": ["error", "always"],
     "import/order": [
       "error",
@@ -68,5 +67,5 @@
     "react/jsx-uses-vars": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
-    }
+  }
 }
