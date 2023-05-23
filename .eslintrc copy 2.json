@@ -4,13 +4,9 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:import/recommended"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb-typescript", "plugin:import/recommended"],
   "ignorePatterns": ["vite.config.ts"],
-  // "parser": "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaFeatures": {
@@ -21,7 +17,21 @@
   },
   "plugins": ["react"],
   "rules": {
-    "semi": ["error", "always"],
+    "semi": ["error", "never"],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/semi": ["error", "never"],
     "import/order": [
       "error",
       {
@@ -53,19 +63,19 @@
       "error",
       {
         "devDependencies": [
-          "test.{ts,tsx}", // repos with a single test file
-          "test-*.{ts,tsx}", // repos with multiple top-level test files
-          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
-          "src/setupTests.ts" // setup
+          "test.{ts,tsx}",
+          "test-*.{ts,tsx}",
+          "**/*{.,_}{test,spec}.{ts,tsx}",
+          "src/setupTests.ts"
         ],
         "optionalDependencies": false
       }
     ],
-    "react/prop-types": false,
     "react/function-component-definition": "off",
     "arrow-body-style": "off",
     "import/prefer-default-export": "off",
     "import/no-named-default": "off",
+    "@typescript-eslint/comma-dangle": "off",
     "no-param-reassign": "off",
     "no-alert": "off",
     "react/require-default-props": "off",
