@@ -25,11 +25,14 @@
     font-size: 80px;
   }
 }
-.fw-bold {
-  font-weight: 900;
-}
-.fw-normal {
-  font-weight: 400;
+.fw {
+  &-bold{
+    font-weight: 900;
+
+  }
+  &-normal {
+    font-weight: 400;
+  }
 }
 
 .border {
@@ -38,6 +41,12 @@
 .round{
   &-1{
     border-radius: 5px;
+  }
+  &-max{
+    border-radius: 160px;
+  }
+  &-full{
+    border-radius: 50%;
   }
 }
 
@@ -64,6 +73,21 @@
 .align-self {
   @include flex(align-self);
 }
+.flex{
+  &-row{
+    flex-direction: row;
+  }
+  &-column{
+    flex-direction: column;
+  }
+  &-row-reverse{
+    flex-direction: row-reverse;
+  }
+  &-column-reverse{
+    flex-direction: column-reverse;
+  }
+}
+
 .h {
   @include space(height);
 }
@@ -117,4 +141,8 @@
 .text {
   @include color;
   @include textpos;
+}
+
+.bg{
+  @include bgcolor;
 }

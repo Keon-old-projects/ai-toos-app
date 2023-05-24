@@ -12,10 +12,10 @@ const Header = () => {
         </h1>
         <ul className="d-flex">
           <li className="px-small">
-            <a href="/">首頁</a>
+            <a className="text-white fw-bold" href="/">首頁</a>
           </li>
           <li className="px-small">
-            <a href="/shop">定價</a>
+            <a className="text-white fw-bold" href="/shop">定價</a>
           </li>
         </ul>
       </Navbar>

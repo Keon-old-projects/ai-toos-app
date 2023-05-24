@@ -134,9 +134,6 @@
   }
 }
 @mixin bgcolor{
-  &-white{
-    background-color: $white;
-  }
   &-black{
     background-color:$black-900;
   }
@@ -154,6 +151,9 @@
   }
   &-surface{
     background-color: $surface;
+  }
+  &-white{
+    background-color: $white;
   }
 }
 @mixin textpos{

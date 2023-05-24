@@ -53,5 +53,10 @@ a {
 }
 
 button{
+  font-size: 1.25rem;
+  font-weight: 900;
+  padding: 20px 40px;
   border-radius: 1rem;
+  color: $white;
+  border: 1px solid $white;
 }
