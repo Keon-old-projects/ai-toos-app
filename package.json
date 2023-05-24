@@ -17,10 +17,10 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/eslint-parser": "^7.21.8",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint": "^8.41.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
@@ -31,7 +31,7 @@
     "prettier": "^2.8.8",
     "sass": "^1.62.1",
     "scss-reset": "^1.4.2",
-    "vite": "^4.3.2",
+    "vite": "^4.3.8",
     "vite-plugin-eslint": "^1.8.1"
   }
 }
