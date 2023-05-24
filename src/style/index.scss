@@ -42,6 +42,12 @@
   &-1{
     border-radius: 5px;
   }
+  &-2{
+    border-radius: 12px;
+  }
+  &-3{
+    border-radius: 1rem;
+  }
   &-max{
     border-radius: 160px;
   }
@@ -145,4 +151,7 @@
 
 .bg{
   @include bgcolor;
+}
+.overflow-hidden{
+  overflow: hidden;
 }
