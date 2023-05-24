@@ -25,7 +25,7 @@ const Home = () => {
     <>
       <Header />
       <section className="container mt-1">
-        <h2 className="display-2 fw-bold">
+        <h2 className="display-2 fw-bold pointer-none">
           透過<br />
           AI工具王的<br />
           強大模型<br />
