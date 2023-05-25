@@ -48,6 +48,14 @@
       #{$x}: 0.5rem !important;
       #{$y}: 0.5rem !important;
     }
+    &-auto {
+      #{$x}: auto !important;
+      #{$y}: auto !important;
+    }
+    &-root {
+      #{$x}: 1rem !important;
+      #{$y}: 1rem !important;
+    }
   } @else {
     &-d1 {
       #{$x}: 160px !important;
@@ -84,6 +92,24 @@
     }
     &-8 {
       #{$x}: 0.5rem !important;
+    }
+    &-25 {
+      #{$x}: 25% !important;
+    }
+    &-50 {
+      #{$x}: 50% !important;
+    }
+    &-75 {
+      #{$x}: 75% !important;
+    }
+    &-100 {
+      #{$x}: 100% !important;
+    }
+    &-root {
+      #{$x}: 1rem !important;
+    }
+    &-auto {
+      #{$x}: auto !important;
     }
   }
 }
@@ -124,50 +150,27 @@
     border-bottom: $side solid $color;
   }
 }
-@mixin color {
+@mixin color($color) {
   &-white {
-    color: $white;
+    #{$color}: $white;
   }
   &-black {
-    color: $black-900;
+    #{$color}: $black-900;
   }
   &-dark {
-    color: $black-800;
+    #{$color}: $black-800;
   }
   &-gray {
-    color: $black-600;
+    #{$color}: $black-600;
   }
   &-gray-light {
-    color: $black-400;
+    #{$color}: $black-400;
   }
   &-light {
-    color: $black-200;
+    #{$color}: $black-200;
   }
   &-surface {
-    color: $surface;
-  }
-}
-@mixin bgcolor {
-  &-black {
-    background-color: $black-900;
-  }
-  &-dark {
-    background-color: $black-800;
-  }
-  &-gray {
-    background-color: $black-600;
-  }
-  &-gray-light {
-    background-color: $black-400;
-  }
-  &-light {
-    background-color: $black-200;
-  }
-  &-surface {
-    background-color: $surface;
-  }
-  &-white {
-    background-color: $white;
+    #{$color}: $surface;
   }
 }
 @mixin textpos {

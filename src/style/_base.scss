@@ -43,16 +43,20 @@ h6,
 small {
   font-size: 0.875rem;
 }
+.fs-root {
+  font-size: 1rem;
+}
 
 a {
   color: $primary;
   text-decoration: none;
+  transition: all ease-out 0.18s;
   &:hover {
     color: $primary;
   }
 }
 
-button{
+button {
   font-size: 1.25rem;
   font-weight: 900;
   padding: 20px 40px;

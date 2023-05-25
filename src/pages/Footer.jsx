@@ -2,13 +2,21 @@ import React from 'react';
 
 import logo from '../assets/logo.png';
 import Container from '../components/Container';
-import Heading from '../components/Heading';
 
 const Footer = () => {
   return (
     <footer className="mt-d3 border-top">
-      <Container inStyle="d-flex justify-content-between px-7 py-d3">
-        <Heading tag={2} inStyle="display-3 fw-bold" inArr={[`首頁`, `定價`]} />
+      <Container inStyle="d-flex justify-content-between flex-wrap px-7 py-d3">
+        <h2 className="display-3 fw-bold ">
+          <a href="/" className="d-block text-white">
+            首頁
+          </a>
+
+          <a href="/shop" className="text-white mt-8">
+            定價
+          </a>
+        </h2>
+
         <img src={logo} alt="logo.png" className="h-1" />
       </Container>
       <section className="d-flex justify-content-between align-items-center py-6 border-top">

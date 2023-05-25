@@ -12,6 +12,18 @@
   }
 }
 
+footer {
+  .container {
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: start;
+      img {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
 /***************************** Utilities *****************************/
 .display {
   &-1 {
@@ -35,6 +47,9 @@
 
 .border {
   @include border(1px, $black-200);
+  &-none {
+    @include border(0, $black-200);
+  }
 }
 .round {
   &-1 {
@@ -107,6 +122,22 @@
 .w {
   @include space(width);
 }
+.max {
+  &-w {
+    @include space(max-width);
+  }
+  &-h {
+    @include space(max-height);
+  }
+}
+.min {
+  &-w {
+    @include space(min-width);
+  }
+  &-h {
+    @include space(min-height);
+  }
+}
 .m {
   @include space(margin);
   &y {
@@ -152,12 +183,12 @@
 }
 
 .text {
-  @include color;
+  @include color(color);
   @include textpos;
 }
 
 .bg {
-  @include bgcolor;
+  @include color(background-color);
 }
 .overflow-hidden {
   overflow: hidden;
