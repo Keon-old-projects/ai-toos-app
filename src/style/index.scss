@@ -1,15 +1,14 @@
 @import './variables';
-@import "./base";
+@import './base';
 @import './module';
-
 
 /***************************** Layout *****************************/
 .container {
-  padding: 0 .75rem;
-  @media (min-width:1140px) {
-    padding: 0;
-    margin: auto;
-    max-width: 1296px;
+  max-width: 1296px;
+  padding: 0;
+  margin: auto;
+  @include pc {
+    padding: 0 0.75rem;
   }
 }
 
@@ -26,9 +25,8 @@
   }
 }
 .fw {
-  &-bold{
+  &-bold {
     font-weight: 900;
-
   }
   &-normal {
     font-weight: 400;
@@ -38,20 +36,20 @@
 .border {
   @include border(1px, $black-200);
 }
-.round{
-  &-1{
+.round {
+  &-1 {
     border-radius: 5px;
   }
-  &-2{
+  &-2 {
     border-radius: 12px;
   }
-  &-3{
+  &-3 {
     border-radius: 1rem;
   }
-  &-max{
+  &-max {
     border-radius: 160px;
   }
-  &-full{
+  &-full {
     border-radius: 50%;
   }
 }
@@ -79,18 +77,27 @@
 .align-self {
   @include flex(align-self);
 }
-.flex{
-  &-row{
+.flex {
+  &-row {
     flex-direction: row;
   }
-  &-column{
+  &-column {
     flex-direction: column;
   }
-  &-row-reverse{
+  &-row-reverse {
     flex-direction: row-reverse;
   }
-  &-column-reverse{
+  &-column-reverse {
     flex-direction: column-reverse;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-1 {
+    flex: 1;
+  }
+  &-2 {
+    flex: 2;
   }
 }
 
@@ -149,12 +156,36 @@
   @include textpos;
 }
 
-.bg{
+.bg {
   @include bgcolor;
 }
-.overflow-hidden{
+.overflow-hidden {
   overflow: hidden;
 }
-.pointer-none{
+.pointer-none {
   user-select: none;
+}
+
+.card-list {
+  &-item {
+    flex: 1 0 350px;
+    max-width: 416px;
+    max-height: 358px;
+    &:hover {
+      animation: bounce 2s infinite;
+    }
+  }
+}
+
+/***************************** animation *****************************/
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

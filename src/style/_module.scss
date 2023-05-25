@@ -1,75 +1,89 @@
 @mixin space($x, $y: null) {
   @if $x and $y {
     &-d1 {
-      #{$x}: 160px;
-      #{$y}: 160px;
+      #{$x}: 160px !important;
+      #{$y}: 160px !important;
     }
     &-d2 {
-      #{$x}: 120px;
-      #{$y}: 120px;
+      #{$x}: 120px !important;
+      #{$y}: 120px !important;
     }
     &-d3 {
-      #{$x}: 80px;
-      #{$y}: 80px;
+      #{$x}: 80px !important;
+      #{$y}: 80px !important;
+    }
+    &-0 {
+      #{$x}: 0 !important;
+      #{$y}: 0 !important;
     }
     &-1 {
-      #{$x}: 3rem;
-      #{$y}: 3rem;
+      #{$x}: 3rem !important;
+      #{$y}: 3rem !important;
     }
     &-2 {
-      #{$x}: 2.5rem;
-      #{$y}: 2.5rem;
+      #{$x}: 2.5rem !important;
+      #{$y}: 2.5rem !important;
     }
     &-3 {
-      #{$x}: 2rem;
-      #{$y}: 2rem;
+      #{$x}: 2rem !important;
+      #{$y}: 2rem !important;
     }
     &-4 {
-      #{$x}: 1.75rem;
-      #{$y}: 1.75rem;
+      #{$x}: 1.75rem !important;
+      #{$y}: 1.75rem !important;
     }
     &-5 {
-      #{$x}: 1.5rem;
-      #{$y}: 1.5rem;
+      #{$x}: 1.5rem !important;
+      #{$y}: 1.5rem !important;
     }
     &-6 {
-      #{$x}: 1.25rem;
-      #{$y}: 1.25rem;
+      #{$x}: 1.25rem !important;
+      #{$y}: 1.25rem !important;
     }
-    &-small {
-      #{$x}: 0.75rem;
-      #{$y}: 0.75rem;
+    &-7 {
+      #{$x}: 0.75rem !important;
+      #{$y}: 0.75rem !important;
+    }
+    &-8 {
+      #{$x}: 0.5rem !important;
+      #{$y}: 0.5rem !important;
     }
   } @else {
     &-d1 {
-      #{$x}: 160px;
+      #{$x}: 160px !important;
     }
     &-d2 {
-      #{$x}: 120px;
+      #{$x}: 120px !important;
     }
     &-d3 {
-      #{$x}: 80px;
+      #{$x}: 80px !important;
+    }
+    &-0 {
+      #{$x}: 0 !important;
     }
     &-1 {
-      #{$x}: 3rem;
+      #{$x}: 3rem !important;
     }
     &-2 {
-      #{$x}: 2.5rem;
+      #{$x}: 2.5rem !important;
     }
     &-3 {
-      #{$x}: 2rem;
+      #{$x}: 2rem !important;
     }
     &-4 {
-      #{$x}: 1.75rem;
+      #{$x}: 1.75rem !important;
     }
     &-5 {
-      #{$x}: 1.5rem;
+      #{$x}: 1.5rem !important;
     }
     &-6 {
-      #{$x}: 1.25rem;
+      #{$x}: 1.25rem !important;
     }
-    &-small {
-      #{$x}: 0.75rem;
+    &-7 {
+      #{$x}: 0.75rem !important;
+    }
+    &-8 {
+      #{$x}: 0.5rem !important;
     }
   }
 }
@@ -96,7 +110,7 @@
   }
 }
 @mixin border($side, $color) {
-  border:  $side solid $color;
+  border: $side solid $color;
   &-top {
     border-top: $side solid $color;
   }
@@ -110,60 +124,80 @@
     border-bottom: $side solid $color;
   }
 }
-@mixin color{
-  &-white{
+@mixin color {
+  &-white {
     color: $white;
   }
-  &-black{
-    color:$black-900;
+  &-black {
+    color: $black-900;
   }
-  &-dark{
+  &-dark {
     color: $black-800;
   }
-  &-gray{
+  &-gray {
     color: $black-600;
   }
-  &-gray-light{
+  &-gray-light {
     color: $black-400;
   }
-  &-light{
+  &-light {
     color: $black-200;
   }
-  &-surface{
+  &-surface {
     color: $surface;
   }
 }
-@mixin bgcolor{
-  &-black{
-    background-color:$black-900;
+@mixin bgcolor {
+  &-black {
+    background-color: $black-900;
   }
-  &-dark{
+  &-dark {
     background-color: $black-800;
   }
-  &-gray{
+  &-gray {
     background-color: $black-600;
   }
-  &-gray-light{
+  &-gray-light {
     background-color: $black-400;
   }
-  &-light{
+  &-light {
     background-color: $black-200;
   }
-  &-surface{
+  &-surface {
     background-color: $surface;
   }
-  &-white{
+  &-white {
     background-color: $white;
   }
 }
-@mixin textpos{
-  &-start{
+@mixin textpos {
+  &-start {
     text-align: start;
   }
-  &-center{
+  &-center {
     text-align: center;
   }
-  &-end{
+  &-end {
     text-align: end;
+  }
+}
+@mixin pc {
+  @media (max-width: 1296px) {
+    @content;
+  }
+}
+@mixin nb {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
   }
 }

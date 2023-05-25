@@ -1,31 +1,35 @@
 import React from 'react';
 
 import logo from '../assets/logo.png';
+import Container from '../components/Container';
+import Heading from '../components/Heading';
 
 const Footer = () => {
   return (
     <footer className="mt-d3 border-top">
-      <section className="d-flex justify-content-between px-small py-d3">
-        <h2 className="display-3 fw-bold">
-          首頁 <br />
-          定價
-        </h2>
+      <Container inStyle="d-flex justify-content-between px-7 py-d3">
+        <Heading tag={2} inStyle="display-3 fw-bold" inArr={[`首頁`, `定價`]} />
         <img src={logo} alt="logo.png" className="h-1" />
-      </section>
+      </Container>
       <section className="d-flex justify-content-between align-items-center py-6 border-top">
         <p className="fw-bold">AI工具王 © 2023</p>
         <ul className="d-flex">
-          <li className="py-small py-6">
-            <a href="https://www.facebook.com/hexschool/?locale=zh_TW" className="text-white fw-bold" target="_blank" rel="noreferrer">
+          <li className="py-7 py-6">
+            <a
+              href="https://www.facebook.com/hexschool/?locale=zh_TW"
+              className="text-white fw-bold"
+              target="_blank"
+              rel="noreferrer"
+            >
               Facebook
             </a>
           </li>
-          <li className="py-small mx-6 py-6">
+          <li className="py-7 mx-6 py-6">
             <a href="https://twitter.com/" className="text-white fw-bold" target="_blank" rel="noreferrer">
               Twitter
             </a>
           </li>
-          <li className="py-small py-6">
+          <li className="py-7 py-6">
             <a href="https://www.instagram.com/" className="text-white fw-bold" target="_blank" rel="noreferrer">
               Instagram
             </a>

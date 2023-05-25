@@ -1,9 +1,12 @@
 @import '../../style/variables';
 .card {
-  width: 375px;
+  max-width: 416px;
+  display: flex;
+  flex-direction: column;
   border: 1px $black-200 solid;
   border-radius: 5px;
   overflow: hidden;
+
   &-img {
     width: 100%;
   }
@@ -12,8 +15,13 @@
   }
   &-title {
     margin-bottom: 12px;
+    h4 {
+      font-size: 1.25rem;
+      font-weight: bolder;
+    }
   }
   .list-group {
+    margin-top: auto;
     &-item {
       display: flex;
       justify-content: space-between;

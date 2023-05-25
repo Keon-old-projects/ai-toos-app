@@ -7,7 +7,10 @@
   "extends": [
     "plugin:react/recommended",
     "airbnb",
-    "plugin:import/recommended"
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "eslint-config-prettier",
+    "prettier"
   ],
   "ignorePatterns": ["vite.config.js"],
   // "parser": "@typescript-eslint/parser",
@@ -18,7 +21,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
   "rules": {
     "semi": ["error", "always"],
     "import/order": [
@@ -69,6 +72,7 @@
     "no-param-reassign": "off",
     "no-alert": "off",
     "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": "warn"
   }
 }
