@@ -1,3 +1,6 @@
+import userImg2 from '../assets/avatar1.png';
+import userImg3 from '../assets/avatar2.png';
+import userImg1 from '../assets/avatar3.png';
 import enterprise from '../assets/enterprise.png';
 import enterprise1 from '../assets/enterprise1.png';
 import enterprise11 from '../assets/enterprise11.png';
@@ -15,7 +18,8 @@ import flash from '../assets/icons/flash on.png';
 import library from '../assets/icons/library add.png';
 import logo from '../assets/logo.png';
 
-const enterpriseArr = [enterprise,
+const enterpriseArr = [
+  enterprise,
   enterprise1,
   enterprise2,
   enterprise3,
@@ -26,12 +30,7 @@ const enterpriseArr = [enterprise,
   enterprise8,
   enterprise9,
   enterprise11,
-  enterprise12];
+  enterprise12
+];
 
-export {
-  star,
-  flash,
-  library,
-  logo,
-  enterpriseArr,
-};
+export { userImg1, userImg2, userImg3, star, flash, library, logo, enterpriseArr };

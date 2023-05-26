@@ -1,13 +1,15 @@
 import React from 'react';
 
-import './card.scss';
+import './ProductCard.scss';
 import icon from '../../assets/icons/share.png';
 import TextTag from '../TextTag';
 
 const ProductCard = ({ title, imgUrl, name, share, content }) => {
   return (
     <div className="card">
-      <img src={imgUrl} alt={name} className="card-img" />
+      <div className="card-img">
+        <img src={imgUrl} alt={name} className="card-img" />
+      </div>
       <div className="card-body">
         <TextTag tag="h4" inStyle="fs-6 card-title fw-bold" inArr={[title]} />
         <p className="card-text">{content}</p>

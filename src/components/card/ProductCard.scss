@@ -1,15 +1,23 @@
 @import '../../style/variables';
+
 .card {
   max-width: 416px;
   display: flex;
   flex-direction: column;
-
   border: 1px $black-200 solid;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.16s;
 
   &-img {
-    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: all 0.16s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
   &-body {
     padding: 1.25rem 2rem;
@@ -28,5 +36,9 @@
       justify-content: space-between;
       padding: 1.25rem 2rem;
     }
+  }
+
+  &:hover {
+    box-shadow: 1px 5px 10px 5px $black-400;
   }
 }

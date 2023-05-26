@@ -1,0 +1,38 @@
+@import '../../style/variables';
+@import '../../style/module';
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $black-800;
+  border-radius: 1rem;
+  flex: 1;
+  min-width: 45%;
+  min-height: 176px;
+  max-height: 318px;
+  transition: border-color 0.24s;
+  &-body {
+    flex: 1;
+    padding: 1.25rem 2rem 0;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $black-800;
+    padding: 1.25rem 2rem;
+    margin-top: 7.5rem;
+    button {
+      padding: 0;
+      transition: all 0.16s;
+      font-size: 1rem;
+    }
+    @include mobile {
+      margin-top: 3.5rem;
+    }
+  }
+  &:hover {
+    border-color: $white;
+  }
+  @include pad {
+    min-width: 90%;
+  }
+}

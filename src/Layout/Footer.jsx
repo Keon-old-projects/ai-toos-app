@@ -1,27 +1,18 @@
 import React from 'react';
 
-import logo from '../assets/logo.png';
-import Container from '../components/Container';
+import upArrow from '../assets/icons/arrow upward.png';
 
 const Footer = () => {
+  const scrollToTop = () =>
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   return (
-    <footer className="mt-d3 border-top">
-      <Container inStyle="d-flex justify-content-between flex-wrap px-7 py-d3">
-        <h2 className="display-3 fw-bold ">
-          <a href="/" className="d-block text-white">
-            首頁
-          </a>
-
-          <a href="/shop" className="text-white mt-8">
-            定價
-          </a>
-        </h2>
-
-        <img src={logo} alt="logo.png" className="h-1" />
-      </Container>
-      <section className="d-flex justify-content-between align-items-center py-6 border-top">
-        <p className="fw-bold">AI工具王 © 2023</p>
-        <ul className="d-flex">
+    <footer className="border-top">
+      <section className="d-flex justify-content-between align-items-center flex-sm-wrap py-6 px-sm-small border-top">
+        <p className="order-sm-1 fw-bold ">AI工具王 © 2023</p>
+        <ul className="order-sm-3 d-flex justify-content-between">
           <li className="py-7 py-6">
             <a
               href="https://www.facebook.com/hexschool/?locale=zh_TW"
@@ -43,9 +34,13 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <a href="/" className="text-white fw-bold">
-          Back to top
-        </a>
+        <button
+          onClick={scrollToTop}
+          className="order-sm-2 d-flex align-items-center text-white fw-bold border-none "
+          style={{ gap: `4px` }}
+        >
+          Back to top <img src={upArrow} alt="" className="h-root" />
+        </button>
       </section>
     </footer>
   );

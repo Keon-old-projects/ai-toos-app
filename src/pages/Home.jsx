@@ -1,19 +1,9 @@
 import React from 'react';
 
-import Footer from './Footer';
-import Header from './Header';
-import userImg2 from '../assets/avatar1.png';
-import userImg3 from '../assets/avatar2.png';
-import userImg1 from '../assets/avatar3.png';
-import Btn from '../components/Btn';
-import CardList from '../components/card/CardList';
-import ReviewCard from '../components/card/ReviewCard';
-import Container from '../components/Container';
-import Deco from '../components/Deco';
-import Marquee from '../components/Marquee';
-import TextTag from '../components/TextTag';
-import { star, flash, library, logo } from '../js/firm';
+import { Btn, CardList, ReviewCard, Container, Deco, Marquee, TextTag } from '../components';
+import { userImg1, userImg2, userImg3, star, flash, library } from '../js/firm';
 import AiMain from '../Layout/AiMain';
+import FooterMenu from '../Layout/FooterMenu';
 
 const Home = () => {
   const cardArr = [
@@ -58,57 +48,56 @@ const Home = () => {
   ];
   return (
     <>
-      <Header />
-      <section className="container mt-1">
-        <TextTag
-          tag="h2"
-          inStyle="display-2 fw-bold pointer-none"
-          inArr={[`透過`, `AI工具王的`, `強大模型`, `讓您的業務更聰明`]}
-        />
-
-        <Btn btnType="button" btnText="開始使用" btnStyle="mt-1" />
-        <Deco inStyle="mt-d3 justify-content-end" />
-      </section>
-
-      <section className="container mt-d1">
-        <div className="d-flex " style={{ gap: '24px' }}>
-          <TextTag tag="h2" inStyle="flex-1 fs-3 fw-bold" inArr={[`我們的服務`]} />
+      <article className="content">
+        <Container mt="d1">
           <TextTag
-            tag="h3"
-            inStyle="flex-2 fs-1 fw-bold"
-            inArr={[`我們相信透過 AI 技術，`, `包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。`]}
+            tag="h2"
+            inStyle="display-2 display-lg-3 fs-sm-1 fw-bold pointer-none"
+            inArr={[`透過`, `AI工具王的`, `強大模型`, `讓您的業務更聰明`]}
           />
-        </div>
-        <main className="card-list d-flex mt-d3 flex-wrap justify-content-center" style={{ gap: '1.5rem' }}>
-          {cardArr.map((item) => (
-            <CardList imgSrc={item.img} title={item.title} directions={item.directions} />
-          ))}
-        </main>
-      </section>
-      <Container mt="d1">
-        <TextTag tag="h3" inStyle="fw-bold mb-d3" inArr={['來自合作夥伴']} />
-        <Marquee />
-        <main className="card-list d-flex mt-d3 flex-wrap justify-content-center" style={{ gap: '1.5rem' }}>
-          {review.map((item) => (
-            <ReviewCard
-              starLength={item.star}
-              text={item.text}
-              userImg={item.userImg}
-              userName={item.userName}
-              userCompany={item.userCompany}
-            />
-          ))}
-        </main>
-      </Container>
 
+          <Btn btnType="button" btnText="開始使用" btnStyle="mt-1" />
+          <Deco inStyle="mt-d3 justify-content-end" />
+        </Container>
+        <Container mt="d1">
+          <div className="d-flex flex-pad-column" style={{ gap: '24px' }}>
+            <TextTag tag="h2" inStyle="flex-1 fs-3 fw-bold" inArr={[`我們的服務`]} />
+            <TextTag
+              tag="p"
+              inStyle="flex-2 fs-1 fs-pad-3 fw-bold"
+              inArr={[`我們相信透過 AI 技術，`, `包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。`]}
+            />
+          </div>
+          <main className="card-list mt-d3 " style={{ gap: '1.5rem' }}>
+            {cardArr.map((item) => (
+              <CardList inStyle="ani-float" imgSrc={item.img} title={item.title} directions={item.directions} />
+            ))}
+          </main>
+        </Container>
+
+        <Container mt="d1">
+          <TextTag tag="h3" inStyle="fw-bold mb-d3" inArr={['來自合作夥伴']} />
+          <Marquee />
+          <main className="card-list mt-d3" style={{ gap: '1.5rem' }}>
+            {review.map((item) => (
+              <ReviewCard
+                starLength={item.star}
+                text={item.text}
+                userImg={item.userImg}
+                userName={item.userName}
+                userCompany={item.userCompany}
+              />
+            ))}
+          </main>
+        </Container>
+      </article>
       <AiMain />
 
       <Container mt="d3" inStyle="d-flex flex-column align-items-center py-d3">
         <TextTag tag="h2" inStyle="fw-bold fs-1 text-center" inArr={['現在就來建立屬於你的服務吧']} />
         <Btn btnType="button" btnText="開始使用" btnStyle="mt-2" />
       </Container>
-
-      <Footer logo={logo} />
+      <FooterMenu />
     </>
   );
 };

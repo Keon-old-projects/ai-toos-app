@@ -7,7 +7,7 @@ const Text = ({ tag, inStyle, inArr }) => {
       <br />
     </>
   ));
-  return React.createElement(tag, { className: `${inStyle}` }, inTest);
+  return React.createElement(tag ?? 'p', { className: `${inStyle ?? ''}` }, inTest);
 };
 
 export default Text;

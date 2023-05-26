@@ -1,0 +1,949 @@
+/***************************** Utilities *****************************/
+.display {
+  &-1 {
+    font-size: 160px;
+  }
+  &-2 {
+    font-size: 120px;
+  }
+  &-3 {
+    font-size: 80px;
+  }
+  &-pc {
+    @include pc {
+      &-1 {
+        font-size: 160px;
+      }
+      &-2 {
+        font-size: 120px;
+      }
+      &-3 {
+        font-size: 80px;
+      }
+    }
+  }
+  &-lg {
+    @include lg {
+      &-1 {
+        font-size: 160px;
+      }
+      &-2 {
+        font-size: 120px;
+      }
+      &-3 {
+        font-size: 80px;
+      }
+    }
+  }
+  &-pad {
+    @include pad {
+      &-1 {
+        font-size: 160px;
+      }
+      &-2 {
+        font-size: 120px;
+      }
+      &-3 {
+        font-size: 80px;
+      }
+    }
+  }
+  &-sm {
+    @include mobile {
+      &-1 {
+        font-size: 160px;
+      }
+      &-2 {
+        font-size: 120px;
+      }
+      &-3 {
+        font-size: 80px;
+      }
+    }
+  }
+}
+.fs {
+  &-root {
+    font-size: 1rem;
+  }
+  &-pc {
+    @include pc {
+      &-1 {
+        font-size: 3rem;
+      }
+      &-2 {
+        font-size: 2.5rem;
+      }
+      &-3 {
+        font-size: 2rem;
+      }
+      &-4 {
+        font-size: 1.75rem;
+      }
+      &-5 {
+        font-size: 1.5em;
+      }
+      &-6 {
+        font-size: 1.25rem;
+      }
+      &-root {
+        font-size: 1rem;
+      }
+      &-small {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  &-lg {
+    @include lg {
+      &-1 {
+        font-size: 3rem;
+      }
+      &-2 {
+        font-size: 2.5rem;
+      }
+      &-3 {
+        font-size: 2rem;
+      }
+      &-4 {
+        font-size: 1.75rem;
+      }
+      &-5 {
+        font-size: 1.5em;
+      }
+      &-6 {
+        font-size: 1.25rem;
+      }
+      &-root {
+        font-size: 1rem;
+      }
+      &-small {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  &-pad {
+    @include pad {
+      &-1 {
+        font-size: 3rem;
+      }
+      &-2 {
+        font-size: 2.5rem;
+      }
+      &-3 {
+        font-size: 2rem;
+      }
+      &-4 {
+        font-size: 1.75rem;
+      }
+      &-5 {
+        font-size: 1.5em;
+      }
+      &-6 {
+        font-size: 1.25rem;
+      }
+      &-root {
+        font-size: 1rem;
+      }
+      &-small {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  &-sm {
+    @include mobile {
+      &-1 {
+        font-size: 3rem;
+      }
+      &-2 {
+        font-size: 2.5rem;
+      }
+      &-3 {
+        font-size: 2rem;
+      }
+      &-4 {
+        font-size: 1.75rem;
+      }
+      &-5 {
+        font-size: 1.5em;
+      }
+      &-6 {
+        font-size: 1.25rem;
+      }
+      &-root {
+        font-size: 1rem;
+      }
+      &-small {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+.fw {
+  &-bold {
+    font-weight: 900;
+  }
+  &-normal {
+    font-weight: 400;
+  }
+}
+
+.border {
+  @include border(1px, $black-200);
+  &-none {
+    @include border(0, $black-200);
+  }
+  &-dark {
+    @include border(1px, $black-800);
+  }
+}
+.round {
+  &-1 {
+    border-radius: 5px;
+  }
+  &-2 {
+    border-radius: 12px;
+  }
+  &-3 {
+    border-radius: 1rem;
+  }
+  &-max {
+    border-radius: 160px;
+  }
+  &-full {
+    border-radius: 50%;
+  }
+}
+
+.d {
+  @include display;
+  &-pc {
+    @include pc {
+      @include display;
+    }
+  }
+  &-lg {
+    @include lg {
+      @include display;
+    }
+  }
+  &-pad {
+    @include pad {
+      @include display;
+    }
+  }
+  &-sm {
+    @include mobile {
+      @include display;
+    }
+  }
+}
+.justify-content {
+  @include flex(justify-content);
+  &-pc {
+    @include pc {
+      @include flex(justify-content);
+    }
+  }
+  &-lg {
+    @include lg {
+      @include flex(justify-content);
+    }
+  }
+  &-pad {
+    @include pad {
+      @include flex(justify-content);
+    }
+  }
+  &-sm {
+    @include mobile {
+      @include flex(justify-content);
+    }
+  }
+}
+.align-items {
+  @include flex(align-items);
+  &-pc {
+    @include pc {
+      @include flex(align-items);
+    }
+  }
+  &-lg {
+    @include lg {
+      @include flex(align-items);
+    }
+  }
+  &-pad {
+    @include pad {
+      @include flex(align-items);
+    }
+  }
+  &-sm {
+    @include mobile {
+      @include flex(align-items);
+    }
+  }
+}
+.align-self {
+  @include flex(align-self);
+  &-pc {
+    @include pc {
+      @include flex(align-self);
+    }
+  }
+  &-lg {
+    @include lg {
+      @include flex(align-self);
+    }
+  }
+  &-pad {
+    @include pad {
+      @include flex(align-self);
+    }
+  }
+  &-sm {
+    @include mobile {
+      @include flex(align-self);
+    }
+  }
+}
+.flex {
+  &-row {
+    flex-direction: row;
+  }
+  &-column {
+    flex-direction: column;
+  }
+  &-row-reverse {
+    flex-direction: row-reverse;
+  }
+  &-column-reverse {
+    flex-direction: column-reverse;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-1 {
+    flex: 1;
+  }
+  &-2 {
+    flex: 2;
+  }
+  &-3 {
+    flex: 3;
+  }
+  &-4 {
+    flex: 4;
+  }
+  &-5 {
+    flex: 5;
+  }
+  &-6 {
+    flex: 6;
+  }
+  &-7 {
+    flex: 7;
+  }
+  &-pc {
+    @include pc {
+      &-row {
+        flex-direction: row;
+      }
+      &-column {
+        flex-direction: column;
+      }
+      &-row-reverse {
+        flex-direction: row-reverse;
+      }
+      &-column-reverse {
+        flex-direction: column-reverse;
+      }
+      &-wrap {
+        flex-wrap: wrap;
+      }
+      &-1 {
+        flex: 1;
+      }
+      &-2 {
+        flex: 2;
+      }
+      &-3 {
+        flex: 3;
+      }
+      &-4 {
+        flex: 4;
+      }
+      &-5 {
+        flex: 5;
+      }
+      &-6 {
+        flex: 6;
+      }
+      &-7 {
+        flex: 7;
+      }
+    }
+  }
+  &-lg {
+    @include lg {
+      &-row {
+        flex-direction: row;
+      }
+      &-column {
+        flex-direction: column;
+      }
+      &-row-reverse {
+        flex-direction: row-reverse;
+      }
+      &-column-reverse {
+        flex-direction: column-reverse;
+      }
+      &-wrap {
+        flex-wrap: wrap;
+      }
+      &-1 {
+        flex: 1;
+      }
+      &-2 {
+        flex: 2;
+      }
+      &-3 {
+        flex: 3;
+      }
+      &-4 {
+        flex: 4;
+      }
+      &-5 {
+        flex: 5;
+      }
+      &-6 {
+        flex: 6;
+      }
+      &-7 {
+        flex: 7;
+      }
+    }
+  }
+  &-pad {
+    @include pad {
+      &-row {
+        flex-direction: row;
+      }
+      &-column {
+        flex-direction: column;
+      }
+      &-row-reverse {
+        flex-direction: row-reverse;
+      }
+      &-column-reverse {
+        flex-direction: column-reverse;
+      }
+      &-wrap {
+        flex-wrap: wrap;
+      }
+      &-1 {
+        flex: 1;
+      }
+      &-2 {
+        flex: 2;
+      }
+      &-3 {
+        flex: 3;
+      }
+      &-4 {
+        flex: 4;
+      }
+      &-5 {
+        flex: 5;
+      }
+      &-6 {
+        flex: 6;
+      }
+      &-7 {
+        flex: 7;
+      }
+    }
+  }
+  &-sm {
+    @include mobile {
+      &-row {
+        flex-direction: row;
+      }
+      &-column {
+        flex-direction: column;
+      }
+      &-row-reverse {
+        flex-direction: row-reverse;
+      }
+      &-column-reverse {
+        flex-direction: column-reverse;
+      }
+      &-wrap {
+        flex-wrap: wrap;
+      }
+      &-1 {
+        flex: 1;
+      }
+      &-2 {
+        flex: 2;
+      }
+      &-3 {
+        flex: 3;
+      }
+      &-4 {
+        flex: 4;
+      }
+      &-5 {
+        flex: 5;
+      }
+      &-6 {
+        flex: 6;
+      }
+      &-7 {
+        flex: 7;
+      }
+    }
+  }
+}
+
+.h {
+  @include space(height);
+  &-pc {
+    @include pc {
+      @include space(height);
+    }
+  }
+  &-lg {
+    @include lg {
+      @include space(height);
+    }
+  }
+  &-pad {
+    @include pad {
+      @include space(height);
+    }
+  }
+  &-sm {
+    @include mobile {
+      @include space(height);
+    }
+  }
+}
+.w {
+  @include space(width);
+  &-pc {
+    @include pc {
+      @include space(width);
+    }
+  }
+  &-lg {
+    @include lg {
+      @include space(width);
+    }
+  }
+  &-pad {
+    @include pad {
+      @include space(width);
+    }
+  }
+  &-sm {
+    @include mobile {
+      @include space(width);
+    }
+  }
+}
+.max {
+  &-w {
+    @include space(max-width);
+    &-pc {
+      @include pc {
+        @include space(max-width);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(max-width);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(max-width);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(max-width);
+      }
+    }
+  }
+  &-h {
+    @include space(max-height);
+    &-pc {
+      @include pc {
+        @include space(max-height);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(max-height);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(max-height);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(max-height);
+      }
+    }
+  }
+}
+.min {
+  &-w {
+    @include space(min-width);
+  }
+  &-h {
+    @include space(min-height);
+  }
+}
+.m {
+  @include space(margin);
+  &y {
+    @include space(margin-top, margin-bottom);
+    &-pc {
+      @include pc {
+        @include space(margin-top, margin-bottom);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(margin-top, margin-bottom);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(margin-top, margin-bottom);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(margin-top, margin-bottom);
+      }
+    }
+  }
+  &x {
+    @include space(margin-left, margin-right);
+    &-pc {
+      @include pc {
+        @include space(margin-left, margin-right);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(margin-left, margin-right);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(margin-left, margin-right);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(margin-left, margin-right);
+      }
+    }
+  }
+  &t {
+    @include space(margin-top);
+    &-pc {
+      @include pc {
+        @include space(margin-top);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(margin-top);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(margin-top);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(margin-top);
+      }
+    }
+  }
+  &b {
+    @include space(margin-bottom);
+    &-pc {
+      @include pc {
+        @include space(margin-bottom);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(margin-bottom);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(margin-bottom);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(margin-bottom);
+      }
+    }
+  }
+  &s {
+    @include space(margin-left);
+    &-pc {
+      @include pc {
+        @include space(margin-left);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(margin-left);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(margin-left);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(margin-left);
+      }
+    }
+  }
+  &e {
+    @include space(margin-right);
+    &-pc {
+      @include pc {
+        @include space(margin-right);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(margin-right);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(margin-right);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(margin-right);
+      }
+    }
+  }
+}
+.p {
+  @include space(padding);
+  &y {
+    @include space(padding-top, padding-bottom);
+    &-pc {
+      @include pc {
+        @include space(padding-top, padding-bottom);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(padding-top, padding-bottom);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(padding-top, padding-bottom);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(padding-top, padding-bottom);
+      }
+    }
+  }
+  &x {
+    @include space(padding-left, padding-right);
+    &-pc {
+      @include pc {
+        @include space(padding-left, padding-right);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(padding-left, padding-right);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(padding-left, padding-right);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(padding-left, padding-right);
+      }
+    }
+  }
+
+  &t {
+    @include space(padding-top);
+    &-pc {
+      @include pc {
+        @include space(padding-top);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(padding-top);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(padding-top);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(padding-top);
+      }
+    }
+  }
+  &b {
+    @include space(padding-bottom);
+    &-pc {
+      @include pc {
+        @include space(padding-bottom);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(padding-bottom);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(padding-bottom);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(padding-bottom);
+      }
+    }
+  }
+  &s {
+    @include space(padding-left);
+    &-pc {
+      @include pc {
+        @include space(padding-left);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(padding-left);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(padding-left);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(padding-left);
+      }
+    }
+  }
+  &e {
+    @include space(padding-right);
+    &-pc {
+      @include pc {
+        @include space(padding-right);
+      }
+    }
+    &-lg {
+      @include lg {
+        @include space(padding-right);
+      }
+    }
+    &-pad {
+      @include pad {
+        @include space(padding-right);
+      }
+    }
+    &-sm {
+      @include mobile {
+        @include space(padding-right);
+      }
+    }
+  }
+}
+
+.text {
+  @include color(color);
+  @include textpos;
+}
+
+.bg {
+  @include color(background-color);
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.pointer-none {
+  user-select: none;
+}
+
+.order {
+  &-1 {
+    order: 1;
+  }
+  &-2 {
+    order: 2;
+  }
+  &-3 {
+    order: 3;
+  }
+  &-4 {
+    order: 4;
+  }
+  &-5 {
+    order: 5;
+  }
+  &-sm {
+    @include mobile {
+      &-1 {
+        order: 1;
+      }
+      &-2 {
+        order: 2;
+      }
+      &-3 {
+        order: 3;
+      }
+      &-4 {
+        order: 4;
+      }
+      &-5 {
+        order: 5;
+      }
+    }
+  }
+}
+
+.list-type-disc {
+  list-style-type: disc;
+}

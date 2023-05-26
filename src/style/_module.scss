@@ -56,6 +56,10 @@
       #{$x}: 1rem !important;
       #{$y}: 1rem !important;
     }
+    &-small {
+      #{$x}: 0.75rem !important;
+      #{$y}: 0.75rem !important;
+    }
   } @else {
     &-d1 {
       #{$x}: 160px !important;
@@ -110,6 +114,9 @@
     }
     &-auto {
       #{$x}: auto !important;
+    }
+    &-small {
+      #{$x}: 0.75rem !important;
     }
   }
 }
@@ -189,7 +196,7 @@
     @content;
   }
 }
-@mixin nb {
+@mixin lg {
   @media (max-width: 992px) {
     @content;
   }
@@ -202,5 +209,23 @@
 @mixin mobile {
   @media (max-width: 576px) {
     @content;
+  }
+}
+
+@mixin display {
+  &-flex {
+    display: flex;
+  }
+  &-block {
+    display: block;
+  }
+  &-inline {
+    display: inline;
+  }
+  &-inline-block {
+    display: inline-block;
+  }
+  &-none {
+    display: none;
   }
 }
