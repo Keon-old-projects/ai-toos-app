@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Btn, CardList, ReviewCard, Container, Deco, Marquee, TextTag } from '../components';
+import { StarBtn, CardList, ReviewCard, Container, Deco, Marquee, TextTag } from '../components';
 import { userImg1, userImg2, userImg3, star, flash, library } from '../js/firm';
 import AiMain from '../Layout/AiMain';
 import FooterMenu from '../Layout/FooterMenu';
@@ -55,8 +55,7 @@ const Home = () => {
             inStyle="display-2 display-lg-3 fs-sm-1 fw-bold pointer-none"
             inArr={[`透過`, `AI工具王的`, `強大模型`, `讓您的業務更聰明`]}
           />
-
-          <Btn btnType="button" btnText="開始使用" btnStyle="mt-1" />
+          <StarBtn inStyle="mt-1" />
           <Deco inStyle="mt-d3 justify-content-end" />
         </Container>
         <Container mt="d1">
@@ -95,7 +94,7 @@ const Home = () => {
 
       <Container mt="d3" inStyle="d-flex flex-column align-items-center py-d3">
         <TextTag tag="h2" inStyle="fw-bold fs-1 text-center" inArr={['現在就來建立屬於你的服務吧']} />
-        <Btn btnType="button" btnText="開始使用" btnStyle="mt-2" />
+        <StarBtn inStyle="mt-1" />
       </Container>
       <FooterMenu />
     </>

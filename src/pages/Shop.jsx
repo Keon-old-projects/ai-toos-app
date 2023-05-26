@@ -2,10 +2,7 @@ import React from 'react';
 
 // import CardList from '../components/card/CardList';
 // import ReviewCard from '../components/card/ReviewCard';
-import PricingCard from '../components/card/PricingCard';
-import Container from '../components/Container';
-import Deco from '../components/Deco';
-import TextTag from '../components/TextTag';
+import { Container, PricingCard, Deco, TextTag } from '../components';
 import AiMain from '../Layout/AiMain';
 import FooterMenu from '../Layout/FooterMenu';
 
