@@ -4,6 +4,7 @@ import Btn from '../components/Btn';
 import ProductCard from '../components/card/ProductCard';
 import Container from '../components/Container';
 import Navbar from '../components/Navbar';
+import Pagination from '../components/Pagination';
 import TextTag from '../components/TextTag';
 import cardsData from '../js/cardsData.json';
 
@@ -37,6 +38,7 @@ const AiMain = () => {
           ))}
         </article>
       </Container>
+      <Pagination />
     </main>
   );
 };

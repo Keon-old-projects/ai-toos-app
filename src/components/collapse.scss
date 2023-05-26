@@ -1,0 +1,13 @@
+@import '../style/variables';
+.collapse {
+  padding: 20px 40px;
+  border: 1px solid $white;
+  display: block;
+  width: 100%;
+  border-color: transparent;
+  cursor: pointer;
+  main {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}

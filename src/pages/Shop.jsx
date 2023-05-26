@@ -3,6 +3,7 @@ import React from 'react';
 // import CardList from '../components/card/CardList';
 // import ReviewCard from '../components/card/ReviewCard';
 import { Container, PricingCard, Deco, TextTag } from '../components';
+import Collapse from '../components/Collapse';
 import AiMain from '../Layout/AiMain';
 import FooterMenu from '../Layout/FooterMenu';
 
@@ -84,6 +85,7 @@ const Shop = () => {
         </Container>
       </article>
       <AiMain />
+      <Collapse />
       <FooterMenu />
     </>
   );
